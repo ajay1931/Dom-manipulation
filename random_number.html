@@ -1,0 +1,64 @@
+<!-- var a=math.random()
+<console.log(math.floor(a*10)+1) -->
+
+<!-- GUESS THE NUMBER PROJECT -->
+
+<!-- <h1>Guess the number</h1>
+<input id="guessnumber">
+<button onclick="checknumber()">check</button>
+<p id="result">Right/wrong</p>
+
+<h3 id="score:">score</h3>
+
+<script>
+    var guessnumber = document.getElementById("guessnumber")
+    var result = document.getElementById("result")
+    var randomnumber = Math.floor(Math.random()*10)+1;
+    console.log(randomnumber)
+
+    var score=document.getElementById("score")
+    var totalscore=10
+    function checknumber() {
+        var enterednumber = +guessnumber.value
+        console.log(typeof enterednumber)
+        if (randomnumber===enterednumber) {
+            result.textContent="right"
+            alert("YOU WON...")
+        }
+        else {
+            totalscore=totalscore-1
+            score.textContent="score:"+totalscore
+            result.textContent="wrong"
+        }
+    }
+
+</script> -->
+
+<h1>Guessing the number</h1>
+<input type="number" id="guessnumber">
+<button onclick="check()">check</button>
+<p id="result">right/wrong</p>
+<p id="score">score:10</p>
+
+<script>
+    var Guessing = document.getElementById("guessnumber")
+    var result = document.getElementById("result")
+    var randomnumber = Math.floor(Math.random() * 10) + 1
+    console.log(randomnumber)
+    var score = document.getElementById("score")
+    var totalscore = 10
+    function check() {
+        var guessnumber = Number(Guessing.value)
+        console.log(typeof guessnumber)
+        if (randomnumber === guessnumber) {
+            result.textContent = "Right"
+            alert("YOU WON...")
+        }
+        else {
+            totalscore = totalscore - 1
+            score.textContent = "Score:" + totalscore
+            result.textContent = "wrong"
+            console.log(totalscore)
+        }
+    }
+</script>
